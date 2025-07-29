@@ -3,10 +3,10 @@ export default function handler(req, res) {
     return res.status(405).json({ is_success: false, message: "Only POST allowed" });
   }
 
-  const FULL_NAME = "piyush_sacher";
-  const DOB = "11122";
-  const EMAIL = "piyush@sacher.com";
-  const ROLL_NUMBER = "123123";
+  const FULL_NAME = "john_doe";
+  const DOB = "17091999";
+  const EMAIL = "john@xyz.com";
+  const ROLL_NUMBER = "ABCD123";
 
   try {
     const { data } = req.body;
@@ -53,6 +53,6 @@ export default function handler(req, res) {
     });
 
   } catch (err) {
-    res.status(400).json({is_success:false,message:err.message});
+    res.status(400).json({ is_success: false, message: err.message });
   }
 }
